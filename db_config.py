@@ -7,7 +7,8 @@ class Database:
           host="localhost",
           user="root",
           password="",
-          database="python_restapi"
+          database="python_restapi",
+          port="3306"
         )
          if self.mydb.is_connected():
             print("************Connected to the mysql database****************")
@@ -19,7 +20,7 @@ class Database:
          exit()
       
       
-      
+       
       
       
       
