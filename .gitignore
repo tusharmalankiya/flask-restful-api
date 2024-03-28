@@ -11,6 +11,7 @@ __pycache__/
 
 # Dependency directories
 venv/
+flaskEnv
 env/
 *.egg-info/
 
