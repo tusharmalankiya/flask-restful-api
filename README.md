@@ -13,16 +13,15 @@ This repository contains a Flask RESTful API project integrated with a MySQL dat
 ## Installation
 
 1. Clone the repository:
-
-   ```bash
-   https://github.com/tusharmalankiya/flask-restful-api.git
-   ```
+```bash
+https://github.com/tusharmalankiya/flask-restful-api.git
+```
 
 2. Navigate to the project directory:
+```bash
+cd flask-restful-api
+```
 
-    ```bash
-    cd flask-restful-api
-    ```
 3. Create a Python Virtual Environment:
 ```bash
 python3 -m venv myenv
