@@ -1,13 +1,17 @@
+from dotenv import load_dotenv
 import mysql.connector
+import os
+
+load_dotenv()
 
 class Database:
     def __init__(self):
       try:
          self.mydb = mysql.connector.connect(
-          host="localhost",
-          user="root",
-          password="",
-          database="python_restapi",
+          host=os.environ.get('HOST'),
+          user=os.environ.get('USER'),
+          password=os.environ.get('PASSWORD'),
+          database=os.environ.get('DATABASE_NAME'),
           port="3306"
         )
          if self.mydb.is_connected():

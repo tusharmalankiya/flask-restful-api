@@ -42,17 +42,18 @@ def new_table():
     table_name = data['table_name']
     table_fields = data['table_fields']
 
-    sql = 'create table ' + table_name + ' (id INT AUTO_INCREMENT PRIMARY KEY, '
+    sql = 'create table ' + table_name + ' (id INT AUTO_INCREMENT PRIMARY KEY '
     for field in table_fields:
-        sql = sql + field
+        sql = sql + ', ' + field + ' VARCHAR(255) '
     sql = sql + ')'
 
     # val = (table_name)
     try:
         db.mycursor.execute(sql)
         message = "Table created successfully"
-    except:
+    except Exception as err:
         message = "Table is already created"
+        print(err)
     finally:
         db.mycursor.execute('show tables')
         tables = []
